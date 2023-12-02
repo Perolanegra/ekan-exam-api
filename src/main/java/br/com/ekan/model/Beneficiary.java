@@ -57,6 +57,7 @@ public class Beneficiary implements Serializable {
     @PrePersist
     public void prePersist() {
         addedDate = LocalDate.now();
+        updateDate = LocalDate.now();
     }
 
     @PreUpdate

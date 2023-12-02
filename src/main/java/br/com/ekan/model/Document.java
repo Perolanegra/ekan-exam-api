@@ -47,6 +47,7 @@ public class Document implements Serializable {
     @PrePersist
     public void prePersist() {
         addedDate = LocalDate.now();
+        updatedDate = LocalDate.now();
     }
 
     @PreUpdate
