@@ -47,8 +47,8 @@ public class Beneficiary implements Serializable {
     private LocalDate addedDate;
 
     @Column
-    @ApiModelProperty(value = "Data de Atualizacao dos dados", name = "updateDate", dataType = "org.joda.time.LocalDate", example = "2023-01-01")
-    private LocalDate updateDate;
+    @ApiModelProperty(value = "Data de Atualizacao dos dados", name = "updatedDate", dataType = "org.joda.time.LocalDate", example = "2023-01-01")
+    private LocalDate updatedDate;
 
 
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
@@ -57,12 +57,12 @@ public class Beneficiary implements Serializable {
     @PrePersist
     public void prePersist() {
         addedDate = LocalDate.now();
-        updateDate = LocalDate.now();
+        updatedDate = LocalDate.now();
     }
 
     @PreUpdate
     public void preUpdate() {
-        updateDate = LocalDate.now();
+        updatedDate = LocalDate.now();
     }
 
 }

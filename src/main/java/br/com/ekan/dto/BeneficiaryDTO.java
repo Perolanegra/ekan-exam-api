@@ -40,8 +40,8 @@ public class BeneficiaryDTO {
     private LocalDate addedDate;
 
     @JsonFormat(pattern = "yyyy-MM-dd")
-    @ApiModelProperty(value = "Data de Atualizacao dos dados", name = "updateDate", dataType = "org.joda.time.LocalDate", example = "2023-01-01")
-    private LocalDate updateDate;
+    @ApiModelProperty(value = "Data de Atualizacao dos dados", name = "updatedDate", dataType = "org.joda.time.LocalDate", example = "2023-01-01")
+    private LocalDate updatedDate;
 
     private List<DocumentDTO> documents;
 
